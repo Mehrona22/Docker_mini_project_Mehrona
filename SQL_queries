@@ -1,0 +1,38 @@
+
+psql -U Mehrona
+
+
+CREATE TABLE Timetable (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(255),
+    instructor VARCHAR(255),
+    day VARCHAR(50),
+    time VARCHAR(50),
+    room VARCHAR(50),
+    building VARCHAR(255),
+    campus VARCHAR(255),
+    level_course VARCHAR(50),
+    level INT
+);
+
+
+INSERT INTO Timetable (course_name, instructor, day, time, room, building, campus, level_course, level) VALUES
+('Data Structures I', 'Not Provided', 'Monday', '11:30 AM - 01:50 PM', 'Not Provided', 'Webster Univ', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 1),
+('Computer and Information', 'Not Provided', 'Wednesday', '11:30 AM - 01:50 PM', 'Not Provided', 'Webster Univ', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 1),
+('IT Project Management', 'Not Provided', 'Wednesday', '04:30 PM - 06:50 PM', 'Not Provided', 'Webster Univ', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 1),
+('Introduction to Psychology', 'Not Provided', 'Friday', '02:00 PM - 04:20 PM', 'Not Provided', 'WebNet+', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 2),
+('Computer Architecture', 'Not Provided', 'Monday', '02:00 PM - 04:20 PM', 'Not Provided', 'Webster Univ', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 2),
+('Introduction to Political Theory', 'Not Provided', 'Thursday', '11:30 AM - 01:50 PM', 'Not Provided', 'WebNet+', 'Webster Univ Tashkent, Uzbekistan', 'Sophomore', 3);
+
+
+CREATE TABLE Students (
+    student_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    classification VARCHAR(50),
+    major VARCHAR(255),
+    advisor VARCHAR(255)
+);
+
+
+INSERT INTO Students (name, classification, major, advisor) VALUES
+('Mehrona Gafforova', 'Junior', 'COSC - Computer Science', 'Abdumanov, Shoxrux');
